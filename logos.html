@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shani Logo Concepts</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&family=Heebo:wght@300;400;500&family=Bellefair&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+body{font-family:Heebo,sans-serif;background:#FAF7F2;color:#2A2420;padding:56px 20px 90px}
+.w{max-width:1240px;margin:0 auto}
+h1{font-family:'Frank Ruhl Libre',serif;font-weight:300;font-size:46px}
+h2{font-family:'Frank Ruhl Libre',serif;font-weight:400;font-size:30px;margin:70px 0 6px}
+.sub{color:#6B615A;font-size:17px;margin-top:6px}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:24px}
+.tile{aspect-ratio:1;border-radius:22px;display:grid;place-items:center;padding:18px;position:relative}
+.tile svg{width:100%;height:auto}
+.tile small{position:absolute;bottom:12px;right:16px;font-size:11.5px;letter-spacing:.12em;opacity:.75}
+.concept{margin-top:40px;background:#fff;border-radius:28px;padding:26px;box-shadow:0 20px 50px -35px rgba(0,0,0,.35)}
+.concept header{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.concept b{font-family:'Frank Ruhl Libre',serif;font-size:25px;font-weight:500}
+.concept span{font-size:12px;letter-spacing:.14em;color:#9A8F86}
+.concept p{color:#6B615A;margin-top:4px;font-size:15.5px}
+</style></head><body><div class="w">
+<h1>שני קאופמן: לוגואים ופלטות צבע</h1>
+<p class="sub">חלק א: הלוגו שנבחר (מספר 5) בפלטות צבע שונות. חלק ב: שישה רעיונות חדשים, כל אחד בשלוש פלטות.</p>
+
+<h2>א. לוגו 5, מילת סימן, בפלטות צבע</h2>
+<div class="row" id="wm"></div>
+
+<h2>ב. רעיונות חדשים</h2>
+<div id="concepts"></div>
+</div>
+<script>
+const P=[
+ {n:'טרקוטה',bg:'#F5EBDD',a:'#B5573B',b:'#3B2A22'},
+ {n:'פטרול ואלמוג',bg:'#0F4C4C',a:'#F08A6C',b:'#F4ECE1'},
+ {n:'שזיף וורוד',bg:'#F3DCD4',a:'#5B2A45',b:'#5B2A45'},
+ {n:'זית וחרדל',bg:'#4F5A2E',a:'#E2B23F',b:'#F3EEDD'},
+ {n:'כחול לילה וזהב',bg:'#1C2541',a:'#D4AF6A',b:'#F2EBDD'},
+ {n:'מרווה ולבנדר',bg:'#E7ECE4',a:'#8C77B8',b:'#3E5747'},
+ {n:'בורדו',bg:'#6E1F2C',a:'#F2C6A8',b:'#FBEFE6'},
+ {n:'שמיים',bg:'#DDEAF2',a:'#2F6690',b:'#1D3B53'},
+];
+const wm=p=>`<svg viewBox="0 0 240 200"><text x="120" y="98" text-anchor="middle" font-family="Frank Ruhl Libre" font-weight="300" font-size="56" fill="${p.b}">שני</text><line x1="68" y1="118" x2="172" y2="118" stroke="${p.a}" stroke-width="1.4"/><circle cx="120" cy="118" r="3.4" fill="${p.a}"/><text x="120" y="148" text-anchor="middle" font-family="Heebo" font-weight="300" font-size="15" letter-spacing="8" fill="${p.b}">קאופמן</text><text x="120" y="174" text-anchor="middle" font-family="Pinyon Script" font-size="16" fill="${p.a}">focus &amp; release</text></svg>`;
+document.getElementById('wm').innerHTML=P.map(p=>`<div class="tile" style="background:${p.bg};color:${p.b}">${wm(p)}<small>${p.n}</small></div>`).join('');
+
+const name=(p,y=168)=>`<text x="120" y="${y}" text-anchor="middle" font-family="Frank Ruhl Libre" font-size="24" fill="${p.b}">שני קאופמן</text>`;
+const C=[
+ {t:'אנסו',k:'מכחול · זן',d:'מעגל מכחול פתוח, הסמל היפני לבהירות ולרגע של שקט. הפתח במעגל אומר שתמיד יש דרך החוצה.',pal:[0,4,5],
+  f:p=>`<svg viewBox="0 0 240 200"><path d="M150 52c-24-18-66-10-78 22s8 66 44 64 54-32 44-62" fill="none" stroke="${p.a}" stroke-width="9" stroke-linecap="round" opacity=".92"/><circle cx="150" cy="52" r="4" fill="${p.b}"/>${name(p,178)}</svg>`},
+ {t:'הצעד הראשון',k:'קשת ומדרגות',d:'פתח מקושת ובתוכו שלוש מדרגות עולות: שיחת היכרות, מיפוי ותהליך. מספר את שלבי העבודה איתה.',pal:[1,2,6],
+  f:p=>`<svg viewBox="0 0 240 200"><path d="M88 132V78a32 32 0 0 1 64 0v54" fill="none" stroke="${p.b}" stroke-width="3"/><path d="M98 132h16v-12h14v-12h14v-12" fill="none" stroke="${p.a}" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="142" cy="86" r="4" fill="${p.a}"/>${name(p)}</svg>`},
+ {t:'כוכב הצפון',k:'כיוון',d:'כוכב מחודד שהוא גם מחוגת מצפן: "להגדיר לאן מתקדמים". הקרן העליונה בצבע הדגש מסמנת את המטרה.',pal:[4,3,7],
+  f:p=>`<svg viewBox="0 0 240 200"><path d="M120 30l9 48 39 12-39 12-9 48-9-48-39-12 39-12z" fill="none" stroke="${p.b}" stroke-width="2.4" stroke-linejoin="round"/><path d="M120 30l9 48h-18z" fill="${p.a}"/><circle cx="120" cy="90" r="5" fill="${p.bg}" stroke="${p.b}" stroke-width="2"/>${name(p,180)}</svg>`},
+ {t:'שיח',k:'תקשורת מקרבת',d:'שתי בועות דיבור שנפגשות ויוצרות לב, כמו בגישור ובתקשורת מקרבת. מתאים במיוחד לליווי הזוגי.',pal:[2,0,6],
+  f:p=>`<svg viewBox="0 0 240 200"><path d="M120 128C96 112 74 96 74 74a22 22 0 0 1 40-12" fill="none" stroke="${p.b}" stroke-width="4" stroke-linecap="round"/><path d="M120 128c24-16 46-32 46-54a22 22 0 0 0-40-12" fill="none" stroke="${p.a}" stroke-width="4" stroke-linecap="round"/><path d="M80 98l-10 14 18-6M160 98l10 14-18-6" fill="none" stroke-linejoin="round" stroke-width="3" stroke="${p.a}"/>${name(p,172)}</svg>`},
+ {t:'נבט',k:'ש׳ צומחת',d:'האות ש׳ מצוירת כשלושה עלים שצומחים מגבעול אחד. ראש, לב וגוף, ושורש אחד שמחובר לקרקע.',pal:[5,3,1],
+  f:p=>`<svg viewBox="0 0 240 200"><path d="M120 136V70" stroke="${p.b}" stroke-width="3.4" stroke-linecap="round"/><path d="M120 96c-4-20-18-30-34-30 0 18 14 30 34 30zM120 96c4-20 18-30 34-30 0 18-14 30-34 30z" fill="${p.a}"/><path d="M120 70c-8-10-8-24 0-34 8 10 8 24 0 34z" fill="${p.b}"/><path d="M96 136h48" stroke="${p.b}" stroke-width="2" stroke-linecap="round" opacity=".5"/>${name(p,176)}</svg>`},
+ {t:'חותם ש״ק',k:'מונוגרמה עברית',d:'האותיות ש׳ וק׳ בתוך עיגול עם הטקסט "מיקוד · שחרור · בהירות" מסביב. נראה טוב כסטיקר, כתמונת פרופיל וכחותמת על הזמנות.',pal:[6,1,4],
+  f:(p,i)=>`<svg viewBox="0 0 240 200"><defs><path id="cp${i}" d="M120 100m-66 0a66 66 0 1 1 132 0a66 66 0 1 1-132 0"/></defs><circle cx="120" cy="100" r="80" fill="none" stroke="${p.a}" stroke-width="1.4"/><circle cx="120" cy="100" r="52" fill="${p.a}"/><text font-family="Heebo" font-size="12" letter-spacing="3" fill="${p.b}"><textPath href="#cp${i}">מיקוד · שחרור · בהירות · שני קאופמן ·</textPath></text><text x="120" y="116" text-anchor="middle" font-family="Frank Ruhl Libre" font-size="44" fill="${p.bg}">ש״ק</text></svg>`},
+];
+let uid=0;
+document.getElementById('concepts').innerHTML=C.map((c,ci)=>`<div class="concept"><header><b>${ci+1}. ${c.t}</b><span>${c.k}</span></header><p>${c.d}</p><div class="row">${c.pal.map(i=>{const p=P[i];return `<div class="tile" style="background:${p.bg};color:${p.b}">${c.f(p,uid++)}<small>${p.n}</small></div>`}).join('')}</div></div>`).join('');
+</script>
+</body></html>

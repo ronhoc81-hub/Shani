@@ -1,0 +1,9 @@
+body{font-family:'Heebo',system-ui,sans-serif;background:#F1ECE6;color:#1F2E2C;line-height:1.8;margin:0;font-size:17px}
+main{max-width:820px;margin:0 auto;padding:48px 20px 80px}
+a{color:#4A4038}
+.back{display:inline-block;margin-bottom:28px;text-decoration:none;border:1px solid rgba(31,46,44,.2);padding:8px 16px;border-radius:999px}
+h1{font-family:'Frank Ruhl Libre',serif;font-weight:400;font-size:44px;line-height:1.15;margin:0 0 8px}
+h2{font-family:'Frank Ruhl Libre',serif;font-weight:500;font-size:24px;margin:36px 0 8px}
+.upd{color:#7D8885;font-size:14px}
+.box{background:#FBF8F3;border:1px solid rgba(31,46,44,.12);border-radius:18px;padding:20px 24px;margin-top:16px}
+:focus-visible{outline:3px solid #C4A68C;outline-offset:3px}
