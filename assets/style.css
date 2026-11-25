@@ -54,7 +54,7 @@ h2{font-size:clamp(32px,4vw,52px);line-height:1.2}
 .hero-txt .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
 .hero-note{font-size:13px;color:var(--muted);margin-top:14px;letter-spacing:.05em}
 .hero-vis{position:relative;overflow:hidden;background:#B9AEA4}
-.hero-vis .bg{position:absolute;inset:0;background:url(assets/clinic-2.jpg) center/cover;filter:sepia(.35) saturate(.5) brightness(.95);transform:scale(1.08);animation:slowzoom 24s ease-in-out infinite alternate}
+.hero-vis .bg{position:absolute;inset:0;background:url(clinic-2.jpg) center/cover;filter:sepia(.35) saturate(.5) brightness(.95);transform:scale(1.08);animation:slowzoom 24s ease-in-out infinite alternate}
 .hero-vis::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(74,64,56,.15),rgba(166,150,138,.55))}
 @keyframes slowzoom{to{transform:scale(1.16)}}
 .hero-vis .inner{position:relative;z-index:2;height:100%;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px;padding:60px 50px}
@@ -86,7 +86,7 @@ section{padding:130px 0;position:relative}
 
 /* quote band */
 .band{position:relative;min-height:560px;display:grid;place-items:center;overflow:hidden;text-align:center;padding:100px 24px}
-.band .bg{position:absolute;inset:0;background:url(assets/clinic-1.jpg) center 30%/cover;filter:sepia(.45) saturate(.45) brightness(.9) blur(1.5px);transform:scale(1.05)}
+.band .bg{position:absolute;inset:0;background:url(clinic-1.jpg) center 30%/cover;filter:sepia(.45) saturate(.45) brightness(.9) blur(1.5px);transform:scale(1.05)}
 .band::after{content:"";position:absolute;inset:0;background:rgba(120,106,94,.5)}
 .band blockquote{position:relative;z-index:2;max-width:760px;color:#fff;font-family:var(--serif);font-size:clamp(26px,3.2vw,42px);line-height:1.45;letter-spacing:.03em}
 .band .script{position:absolute;z-index:2;bottom:50px;left:8%;color:#fff;font-size:64px;opacity:.9}
