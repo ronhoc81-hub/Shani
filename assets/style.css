@@ -1,8 +1,8 @@
 
 :root{
-  --paper:#F1ECE6; --paper-2:#E9E2DA; --card:#F7F4F0;
-  --ink:#3E3631; --ink-soft:#6B615A; --muted:#968B82;
-  --taupe:#A6968A; --blush:#CDB6A7; --olive:#5A574A; --deep:#4A4038; --gold:#C4A68C;
+  --paper:#F5EBDD; --paper-2:#EEDFCC; --card:#FBF5EC;
+  --ink:#3B2A22; --ink-soft:#6A5246; --muted:#97796A;
+  --taupe:#B5573B; --blush:#E2B5A0; --olive:#B5573B; --deep:#3B2A22; --gold:#B5573B;
   --line:rgba(62,54,49,.16);
   --serif:'Bellefair','Frank Ruhl Libre',serif; --sans:'Heebo',system-ui,sans-serif; --script:'Pinyon Script',cursive;
   --max:1180px;
